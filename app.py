@@ -73,6 +73,20 @@ with col2:
         "Independent / Flexible"
         ]
     )
+    st.markdown(
+        "<p style='text-align: center; font-weight: bold; margin-bottom: -10px;'>Seniority Level</p>",
+        unsafe_allow_html=True
+    )
+    seniority_pref = st.multiselect(
+        label="",
+        options=[
+            "Entry-Level",
+            "Mid-Level",
+            "Senior",
+            "Lead",
+            "Executive"
+        ]
+    )
 
 
 
