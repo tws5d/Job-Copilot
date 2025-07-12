@@ -17,10 +17,9 @@ with col1:
         """, unsafe_allow_html=True)
 
 with col2:
-    # THE FIX: Remove font-size to inherit the correct default.
-    # Use margin-top to push the element down into alignment.
+    # THE FIX: A simple div with text-align and a small, safe margin-top value.
     st.markdown(
-        "<div style='text-align: right; margin-top: 1.75rem;'>💰 Desired Salary</div>",
+        "<div style='text-align: right; margin-top: 0.5rem;'>💰 Desired Salary</div>",
         unsafe_allow_html=True
     )
 
