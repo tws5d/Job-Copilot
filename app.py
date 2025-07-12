@@ -38,7 +38,7 @@ with col1:
         margin=dict(l=20, r=20, t=20, b=20)
     )
 
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=False, width=350, height=350)
     
 with col2:
     salary = st.text_input(
