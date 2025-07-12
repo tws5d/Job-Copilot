@@ -28,7 +28,7 @@ with col2:
 
     # wrap the text_input in a custom container and lift it up by 1rem
     sub2.markdown(
-        '<div class="salary-input-wrapper" style="position: relative; top: -1rem;">',
+        '<div class="salary-input-wrapper" style="position: relative; top: -5rem;">',
         unsafe_allow_html=True
     )
 
