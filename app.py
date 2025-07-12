@@ -17,7 +17,7 @@ with col1:
         """, unsafe_allow_html=True)
 
 with col2:
-    st.markdown("#### 💰 Desired Salary Minimum")
+    st.markdown("#### 💰 Desired Minimum Salary")
     salary = st.slider(
         "Select your minimum target salary (USD)",
         min_value=0,
@@ -26,5 +26,5 @@ with col2:
         value=75000,
         label_visibility="collapsed"  # hides the default label
     )
-    st.markdown(f"**Selected Minimum:** ${salary:,.0f}")
+    
 
