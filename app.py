@@ -29,17 +29,11 @@ with col2:
     # wrap the text_input in a custom container
     sub2.markdown('<div class="salary-input-wrapper">', unsafe_allow_html=True)
 
+    # lift the input up by giving an empty div a negative bottom margin
+    sub2.markdown('<div style="margin-bottom: -1rem;"></div>', unsafe_allow_html=True)
+
     # empty label, placeholder text
     salary = sub2.text_input("", placeholder="E.g., $95,000")
 
-    # close the wrapper and inject scoped CSS to lift it via transform
-    sub2.markdown("""
-    </div>
-    <style>
-    .salary-input-wrapper {
-        transform: translateY(-10.5rem) !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
-
+    # close the wrapper
+    sub2.markdown('</div>', unsafe_allow_html=True)
