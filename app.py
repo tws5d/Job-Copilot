@@ -17,14 +17,25 @@ with col1:
         """, unsafe_allow_html=True)
 
 with col2:
-    st.markdown("#### 💰 Desired Minimum Salary")
+    st.markdown("<h4 style='text-align: center;'>💰 Desired Minimum Salary</h4>", unsafe_allow_html=True)
+
     salary = st.slider(
-        "Select your minimum target salary (USD)",
+        label="",
         min_value=0,
         max_value=500000,
         step=5000,
-        value=75000,
-        label_visibility="collapsed"  # hides the default label
+        value=250000,
+        label_visibility="collapsed"
     )
+
+    # Custom labels under the slider
+    st.markdown(f"""
+    <div style='display: flex; justify-content: space-between; padding: 0 8px;'>
+        <span style='color: #aaa;'>$0</span>
+        <span style='color: red; font-weight: bold;'>${salary:,.0f}</span>
+        <span style='color: #aaa;'>$500K+</span>
+    </div>
+    """, unsafe_allow_html=True)
+
     
 
