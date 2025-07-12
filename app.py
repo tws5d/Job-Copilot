@@ -1,33 +1,37 @@
 import streamlit as st
 
+# It's good practice to set the page config first.
+st.set_page_config(layout="wide")
+
 st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsafe_allow_html=True)
 
-col1, col2 = st.columns([3, 4])  # equal column size
+# --- Column Layout ---
+# The list [3, 4] creates two columns where the second column is 4/3 (~1.33x)
+# wider than the first. To make them equal, you would use st.columns(2).
+col1, col2 = st.columns([3, 4])
 
 with col1:
+    # The expander is a great way to tuck away instructions!
     with st.expander("📘 How to Use This Tool", expanded=False):
         st.markdown("""
-        <div style='text-align: left;'>
-            <p><strong>Step 1:</strong> Set your job preferences</p>
-            <p><strong>Step 2:</strong> Paste a job description</p>
-            <p><strong>Step 3:</strong> Upload Resume</p>
-            <p><strong>Step 4:</strong> Click "GO" to assess Fit</p>
-            <p><strong>Step 5:</strong> (Optional) Generate a tailored cover letter or resume</p>
-        </div>
-        """, unsafe_allow_html=True)
+            **Step 1:** Set your job preferences
+            **Step 2:** Paste a job description
+            **Step 3:** Upload Resume
+            **Step 4:** Click "GO" to assess Fit
+            **Step 5:** (Optional) Generate a tailored cover letter or resume
+        """) # No need for the div or <p> tags, markdown handles this.
 
 with col2:
-    st.markdown("""
-        <h5 style='text-align: center; line-height: 1.1; margin-top: -0.5rem; margin-bottom: -0.2rem; font-size: 1.1rem;'>
-            💰 Desired Minimum Salary
-        </h5>
-    """, unsafe_allow_html=True)
-
-    salary_input = st.text_input(
-        label="",
-        placeholder="e.g., $125,000"
+    # --- Simplified Input Widget ---
+    # It's better to use the widget's built-in label for titles.
+    # This avoids complex HTML/CSS and ensures proper alignment.
+    # st.number_input is also more suitable for salary than text_input.
+    salary_input = st.number_input(
+        label="💰 Desired Minimum Salary",
+        min_value=0,
+        placeholder="e.g., 125000",
+        step=1000,
+        format="%d" # Use %d for a clean integer display
     )
 
-
-    
-
+st.write(f"Salary input: ${salary_input:,}") # Example of how to display the input
