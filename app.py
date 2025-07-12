@@ -18,17 +18,21 @@ with col1:
 
 with col2:
     st.markdown("<h4 style='text-align: center;'>💰 Desired Minimum Salary</h4>", unsafe_allow_html=True)
-    
-    # Hide default slider value labels using CSS
+
     st.markdown("""
         <style>
+        /* Hide default min/max labels */
         div[data-testid="stSlider"] > label + div div:nth-of-type(2) {
+            display: none;
+        }
+
+        /* Hide the floating tooltip */
+        div[data-testid="stSlider"] span[data-testid="stTooltipContent"] {
             display: none;
         }
         </style>
     """, unsafe_allow_html=True)
-
-
+        
     salary = st.slider(
         label="",
         min_value=0,
