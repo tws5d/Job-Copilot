@@ -1,16 +1,5 @@
 import streamlit as st
 
-# -- tweak input position & width --
-st.markdown("""
-    <style>
-        input[type="text"] {
-            margin-top: -10px !important;
-            margin-left: -30px !important;
-            width: 100px !important;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
 st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsafe_allow_html=True)
 
 col1, col2 = st.columns([3, 4])
@@ -30,9 +19,11 @@ with col1:
 with col2:
     sub1, sub2 = st.columns([2, 1])
     sub1.markdown(
-        "<h3 style='text-align:left; margin:0; font-size:1.25rem;'>💰 Desired Salary</h3>",
+        "<h3 style='text-align: left; line-height: 1.1; margin:0; font-size: 1.25rem;'>💰 Desired Salary</h3>",
         unsafe_allow_html=True
     )
     salary = sub2.text_input("", placeholder="E.g., $95,000")
 
-    # …any further widgets below will span full col2…
+    # now any widgets here will span the full width of col2
+    # e.g.:
+    # st.write("…other stuff below…")
