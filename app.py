@@ -17,7 +17,7 @@ with col1:
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown("<h3 style='text-align: center;'>Job Fit: 🟡 Moderate</h3>", unsafe_allow_html=True) # placeholder fit logic
+    st.markdown("<div style='text-align: center; font-size: 40px; font-weight: bold;'>Job Fit: 🟡 Moderate</div>", unsafe_allow_html=True) # placeholder fit logic
     
     # Placeholder radar chart
     categories = ['Skills', 'Experience', 'Culture', 'Location', 'Salary']
