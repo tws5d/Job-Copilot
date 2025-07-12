@@ -94,6 +94,16 @@ with col2:
             "Executive"
         ]
     )
+    st.markdown(
+        "<p style='text-align: center; font-weight: bold; margin-bottom: -10px;'>Paste Job Description</p>",
+        unsafe_allow_html=True
+    )
+    job_description = st.text_area(
+        label="",
+        placeholder="Paste the full job description here...",
+        height=200
+    )
+
 
 
 
