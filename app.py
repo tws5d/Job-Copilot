@@ -2,7 +2,8 @@ import streamlit as st
 
 st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns([3, 2, 1])
+# THE FIX: Add the gap="small" parameter to reduce space between columns.
+col1, col2, col3 = st.columns([3, 2, 1], gap="small")
 
 with col1:
     with st.expander("🤖 How to Use This Tool", expanded=False):
@@ -17,7 +18,6 @@ with col1:
         """, unsafe_allow_html=True)
 
 with col2:
-    # THE FIX: A simple div with text-align and a small, safe margin-top value.
     st.markdown(
         "<div style='text-align: right; margin-top: 0.5rem;'>💰 Desired Salary</div>",
         unsafe_allow_html=True
