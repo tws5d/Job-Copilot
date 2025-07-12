@@ -2,9 +2,9 @@ import streamlit as st
 
 st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsafe_allow_html=True)
 
-# start a single horizontal row for the expander, label, and input
+# start a single flex row for all three widgets
 st.markdown(
-    "<div style='display: flex; align-items: center; gap: 0.5rem; width: 100%;'>",
+    "<div style='display:flex; align-items:baseline; gap:1rem; width:100%;'>",
     unsafe_allow_html=True
 )
 
@@ -24,11 +24,11 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.text_input(
-    "", 
-    placeholder="E.g., $95,000", 
+salary = st.text_input(
+    "",
+    placeholder="E.g., $95,000",
     label_visibility="collapsed"
 )
 
-# close the horizontal row
+# close the flex row
 st.markdown("</div>", unsafe_allow_html=True)
