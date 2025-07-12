@@ -42,10 +42,8 @@ with col1:
         showlegend=False
     )
 
-    with st.container():
-        st.markdown("<div style='display: flex; justify-content: center;'>", unsafe_allow_html=True)
-        st.plotly_chart(fig, use_container_width=False, width=350, height=350)
-        st.markdown("</div>", unsafe_allow_html=True)
+    st.plotly_chart(fig, use_container_width=True)
+
 
     
 with col2:
