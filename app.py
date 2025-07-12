@@ -40,7 +40,11 @@ with col1:
         showlegend=False
     )
 
-    st.plotly_chart(fig, use_container_width=False, width=350, height=350)
+    with st.container():
+        st.markdown("<div style='display: flex; justify-content: center;'>", unsafe_allow_html=True)
+        st.plotly_chart(fig, use_container_width=False, width=350, height=350)
+        st.markdown("</div>", unsafe_allow_html=True)
+
     
 with col2:
     salary = st.text_input(
