@@ -5,11 +5,12 @@ st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsa
 with st.expander("📘 How to Use This Tool", expanded=False):
     st.markdown("""
     <div style='text-align: center;'>
-    **Step 1:** Set your job preferences below  \n
-    **Step 2:** Paste a job description  \n
-    **Step 3:** Upload Resume  \n
-    **Step 4:** Click GO to see your Fit Score  \n
-    **Step 5:** Review feedback  \n
-    **Step 6:** (Optional) Generate a tailored cover letter or resume
+        <p><strong>Step 1:</strong> Set your job preferences below</p>
+        <p><strong>Step 2:</strong> Paste a job description</p>
+        <p><strong>Step 3:</strong> Upload Resume</p>
+        <p><strong>Step 4:</strong> Click GO to see your Fit Score</p>
+        <p><strong>Step 5:</strong> Review feedback</p>
+        <p><strong>Step 6:</strong> (Optional) Generate a tailored cover letter or resume</p>
     </div>
     """, unsafe_allow_html=True)
+
