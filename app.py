@@ -19,6 +19,6 @@ with col1:
 with col2:
     st.markdown("""
         <h3 style='text-align: center; line-height: 1.1; margin-top: -0.5rem; margin-bottom: -0.2rem; font-size: 1.0rem;'>
-            💰 Desired Minimum Salary
+            💰 Desired Salary
         </h3>
     """, unsafe_allow_html=True)
