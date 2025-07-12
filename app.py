@@ -59,6 +59,21 @@ with col2:
         label="",
         options=["Remote", "Hybrid", "On Site"]
     )
+    st.markdown(
+        "<p style='text-align: center; font-weight: bold; margin-bottom: -10px;'>Company Culture</p>",
+        unsafe_allow_html=True
+    )
+    culture_pref = st.selectbox(
+        label="",
+        options=[
+        "No Preference",
+        "Mission-Driven",
+        "Fast-Paced / Startup",
+        "Collaborative / Team-Oriented",
+        "Independent / Flexible"
+        ]
+    )
+
 
 
 
