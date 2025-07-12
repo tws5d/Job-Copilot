@@ -32,15 +32,14 @@ with col2:
     # empty label, placeholder text
     salary = sub2.text_input("", placeholder="E.g., $95,000")
 
-    # close the wrapper and inject scoped CSS to tighten its margins
+    # close the wrapper and inject scoped CSS to lift the whole wrapper up
     sub2.markdown("""
     </div>
     <style>
-    .salary-input-wrapper .stTextInput > div {
-        margin-top: 10rem !important;
-        margin-bottom: 0rem;
-        padding-top: 0rem;
-        padding-bottom: 0rem;
+    .salary-input-wrapper {
+        position: relative !important;
+        top: -0.5rem !important;
     }
     </style>
     """, unsafe_allow_html=True)
+
