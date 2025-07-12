@@ -1,6 +1,19 @@
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
 st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsafe_allow_html=True)
+
+# This CSS will vertically align the content of all columns
+st.markdown("""
+<style>
+    /* Targets the container of all columns */
+    [data-testid="stHorizontalBlock"] {
+        align-items: end;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 
 col1, col2, col3 = st.columns([3, 2, 1])
 
@@ -18,7 +31,7 @@ with col1:
 
 with col2:
     st.markdown(
-        "<h3 style='margin:0; font-size:1.25rem;'>💰 Desired Salary</h3>",
+        "<h3 style='text-align: right; margin-bottom: 0.6rem;'>💰 Desired Salary</h3>",
         unsafe_allow_html=True
     )
 
