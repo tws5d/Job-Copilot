@@ -63,7 +63,7 @@ with col2:
         "<p style='text-align: center; font-weight: bold; margin-bottom: -10px;'>Company Culture</p>",
         unsafe_allow_html=True
     )
-    culture_pref = st.selectbox(
+    culture_pref = st.multiselect(
         label="",
         options=[
         "No Preference",
