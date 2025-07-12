@@ -16,4 +16,12 @@ with col1:
         </div>
         """, unsafe_allow_html=True)
 
+with col2:
+    salary = st.slider(
+        "Minimum Salary ($)", 
+        min_value=0, 
+        max_value=500000, 
+        step=5000, 
+        value=75000  # default
+    )
 
