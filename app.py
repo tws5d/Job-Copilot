@@ -22,15 +22,7 @@ with col2:
 
     # tighten up the right- and bottom-margins here
     sub1.markdown(
-        """
-        <h3 style="
-            text-align: left;
-            margin: 0 0.5rem -0.5rem 0;
-            font-size: 1.25rem;
-        ">
-            💰 Desired Salary
-        </h3>
-        """,
+        "<h3 style='text-align:left; margin:0 0.2rem -1rem 0; font-size:1.25rem;'>💰 Desired Salary</h3>",
         unsafe_allow_html=True
     )
 
