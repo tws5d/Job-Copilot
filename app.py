@@ -99,3 +99,6 @@ with col2:
         placeholder="Paste the full job description here...",
         height=200
     )
+st.markdown("<br>", unsafe_allow_html=True)  # spacing
+
+go_clicked = st.button("🚀 GO", use_container_width=True)
