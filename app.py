@@ -26,7 +26,21 @@ with col2:
         unsafe_allow_html=True
     )
 
+    # wrap the text_input in a custom container
+    sub2.markdown('<div class="salary-input-wrapper">', unsafe_allow_html=True)
+
     # empty label, placeholder text
     salary = sub2.text_input("", placeholder="E.g., $95,000")
-    
-    # any further widgets here will span the full width of col2
+
+    # close the wrapper and inject scoped CSS to tighten its margins
+    sub2.markdown("""
+    </div>
+    <style>
+    .salary-input-wrapper .stTextInput > div {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+    </style>
+    """, unsafe_allow_html=True)
