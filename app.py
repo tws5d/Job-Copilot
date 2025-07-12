@@ -1,4 +1,5 @@
 import streamlit as st
+import plotly.graph_objects as go
 
 st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsafe_allow_html=True)
 
@@ -15,6 +16,31 @@ with col1:
             <p><strong>Step 5:</strong> (Optional) Generate a tailored cover letter or resume</p>
         </div>
         """, unsafe_allow_html=True)
+
+    st.markdown("### Job Fit")
+    
+    # Placeholder radar chart
+    categories = ['Skills', 'Experience', 'Culture Fit', 'Location', 'Salary']
+    values = [3, 4, 2, 5, 3]
+
+    fig = go.Figure()
+    fig.add_trace(go.Scatterpolar(
+        r=values,
+        theta=categories,
+        fill='toself',
+        name='Fit Score'
+    ))
+    fig.update_layout(
+        polar=dict(
+            radialaxis=dict(visible=True, range=[0, 5])
+        ),
+        showlegend=False,
+        margin=dict(l=20, r=20, t=20, b=20)
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("🟡 Moderate – Consider")  # Placeholder feedback message
 
 with col2:
     salary = st.text_input(
