@@ -37,7 +37,7 @@ with col2:
     </div>
     <style>
     .salary-input-wrapper .stTextInput > div {
-        margin-top: 0rem;
+        margin-top: -1rem;
         margin-bottom: 0rem;
         padding-top: 0rem;
         padding-bottom: 0rem;
