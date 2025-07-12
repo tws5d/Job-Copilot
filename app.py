@@ -38,7 +38,7 @@ with col2:
     <style>
     .salary-input-wrapper {
         position: relative !important;
-        top: -0.5rem !important;
+        top: -5.5rem !important;
     }
     </style>
     """, unsafe_allow_html=True)
