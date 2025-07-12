@@ -42,6 +42,13 @@ with col1:
         showlegend=False
     )
     st.plotly_chart(fig, use_container_width=True)
+
+    resume_file = st.file_uploader(
+        "Upload Your Resume",
+        type=["pdf", "doc", "docx", "txt"],
+        label_visibility="collapsed"
+    )
+
     
 with col2:
     salary = st.text_input(
