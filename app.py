@@ -31,11 +31,13 @@ with col1:
         name='Fit Score'
     ))
     fig.update_layout(
+        width=350,
+        height=350,
         polar=dict(
-            radialaxis=dict(visible=True, range=[0, 5])
+            radialaxis=dict(visible=True, range=[0, 5]),
         ),
-        showlegend=False,
-        margin=dict(l=20, r=20, t=20, b=20)
+        margin=dict(l=40, r=40, t=40, b=40),
+        showlegend=False
     )
 
     st.plotly_chart(fig, use_container_width=False, width=350, height=350)
