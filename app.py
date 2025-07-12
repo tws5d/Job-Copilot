@@ -2,16 +2,6 @@ import streamlit as st
 
 st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsafe_allow_html=True)
 
-# THE FIX: This CSS targets a stable Streamlit attribute to control the gap.
-st.markdown("""
-    <style>
-        [data-testid="stHorizontalBlock"] {
-            gap: 0.5rem;
-        }
-    </style>
-""", unsafe_allow_html=True)
-
-
 col1, col2, col3 = st.columns([3, 2, 1])
 
 with col1:
@@ -28,13 +18,13 @@ with col1:
 
 with col2:
     st.markdown(
-        "<div style='text-align: right; margin-top: 0.5rem;'>💰 Desired Salary</div>",
+        "<h3 style='margin:0; font-size:1.25rem;'>💰 Desired Salary</h3>",
         unsafe_allow_html=True
     )
 
 with col3:
     salary = st.text_input(
-        "",
-        placeholder="E.g., $95,000",
+        "", 
+        placeholder="E.g., $95,000", 
         label_visibility="collapsed"
     )
