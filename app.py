@@ -17,8 +17,13 @@ with col1:
         """, unsafe_allow_html=True)
 
 with col2:
-    st.markdown("""
-        <h3 style='text-align: left; line-height: 1.1; margin-top: 0.0rem; margin-bottom: -0.2rem; font-size: 1.25rem;'>
-            💰 Desired Salary
-        </h3>
-    """, unsafe_allow_html=True)
+    sub1, sub2 = st.columns([1, 2])
+    sub1.markdown(
+        "<h3 style='text-align: left; line-height: 1.1; margin:0; font-size: 1.25rem;'>💰 Desired Salary</h3>",
+        unsafe_allow_html=True
+    )
+    salary = sub2.text_input("", placeholder="E.g., $95,000")
+
+    # now any widgets here will span the full width of col2
+    # e.g.:
+    # st.write("…other stuff below…")
