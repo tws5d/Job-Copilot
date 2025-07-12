@@ -2,7 +2,7 @@ import streamlit as st
 
 st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsafe_allow_html=True)
 
-col1, col2 = st.columns([2, 3])  # wider left column
+col1, col2 = st.columns([3, 4])  # wider left column
 
 with col1:
     with st.expander("📘 How to Use This Tool", expanded=False):
