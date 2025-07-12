@@ -2,7 +2,7 @@ import streamlit as st
 
 st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsafe_allow_html=True)
 
-col1, col2, col3 = st.columns([3, 1, 1])
+col1, col2, col3 = st.columns([3, 2, 1])
 
 with col1:
     with st.expander("🤖 How to Use This Tool", expanded=False):
