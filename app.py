@@ -50,6 +50,7 @@ with col2:
         label_visibility="collapsed"
     )
     location_pref = st.multiselect(
+        "Work Arrangement",
         options=["Remote", "Hybrid", "On Site"]
     )
 
