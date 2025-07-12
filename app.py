@@ -2,28 +2,51 @@ import streamlit as st
 
 st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsafe_allow_html=True)
 
-col1, col2 = st.columns([3, 4])  # equal column size
+col1, col2 = st.columns([3, 4])  # equal column size
 
 with col1:
-    with st.expander("📘 How to Use This Tool", expanded=False):
-        st.markdown("""
-        <div style='text-align: left;'>
-            <p><strong>Step 1:</strong> Set your job preferences</p>
-            <p><strong>Step 2:</strong> Paste a job description</p>
-            <p><strong>Step 3:</strong> Upload Resume</p>
-            <p><strong>Step 4:</strong> Click "GO" to assess Fit</p>
-            <p><strong>Step 5:</strong> (Optional) Generate a tailored cover letter or resume</p>
-        </div>
-        """, unsafe_allow_html=True)
+    with st.expander("📘 How to Use This Tool", expanded=False):
+        st.markdown("""
+        <div style='text-align: left;'>
+            <p><strong>Step 1:</strong> Set your job preferences</p>
+            <p><strong>Step 2:</strong> Paste a job description</p>
+            <p><strong>Step 3:</strong> Upload Resume</p>
+            <p><strong>Step 4:</strong> Click "GO" to assess Fit</p>
+            <p><strong>Step 5:</strong> (Optional) Generate a tailored cover letter or resume</p>
+        </div>
+        """, unsafe_allow_html=True)
 
 with col2:
-    st.markdown("""
-        <h5 style='text-align: center; line-height: 1.1; margin-top: -0.5rem; margin-bottom: -0.2rem; font-size: 1.1rem;'>
-            💰 Desired Minimum Salary
-        </h5>
-    """, unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align: center;'>💰 Desired Minimum Salary</h4>", unsafe_allow_html=True)
 
-    salary_input = st.text_input(
-        label="",
-        placeholder="e.g., $125,000"
-    )
+    st.markdown("""
+        <style>
+        /* Hide default min/max labels */
+        div[data-testid="stSlider"] > label + div div:nth-of-type(2) {
+            display: none;
+        }
+
+        /* Hide the floating tooltip */
+        div[data-testid="stSlider"] span[data-testid="stTooltipContent"] {
+            display: none;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+        
+    salary = st.slider(
+        label="",
+        min_value=0,
+        max_value=500000,
+        step=5000,
+        value=250000,
+        label_visibility="collapsed"
+    )
+
+    # Custom labels under the slider
+    st.markdown(f"""
+    <div style='display: flex; justify-content: space-between; padding: 0 8px;'>
+        <span style='color: #aaa;'>$0</span>
+        <span style='color: red; font-weight: bold;'>${salary:,.0f}</span>
+        <span style='color: #aaa;'>$500K+</span>
+    </div>
+    """, unsafe_allow_html=True)
