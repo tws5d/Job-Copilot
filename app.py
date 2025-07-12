@@ -31,8 +31,8 @@ with col1:
         name='Fit Score'
     ))
     fig.update_layout(
-        width=350,
-        height=350,
+        width=300,
+        height=300,
         polar=dict(
             radialaxis=dict(visible=True, range=[0, 5]),
         ),
