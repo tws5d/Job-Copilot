@@ -33,8 +33,8 @@ with col1:
         text=[]
     ))
     fig.update_layout(
-        width=300,
-        height=300,
+        width=350,
+        height=350,
         polar=dict(
             radialaxis=dict(visible=True, range=[0, 5]),
         ),
