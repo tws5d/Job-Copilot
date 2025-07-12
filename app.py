@@ -17,7 +17,7 @@ with col1:
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown("### Job Fit")
+    st.markdown("### Job Fit - 🟡 Moderate – Consider") # placeholder fit logic
     
     # Placeholder radar chart
     categories = ['Skills', 'Experience', 'Culture Fit', 'Location', 'Salary']
@@ -39,9 +39,7 @@ with col1:
     )
 
     st.plotly_chart(fig, use_container_width=True)
-
-    st.markdown("🟡 Moderate – Consider")  # Placeholder feedback message
-
+    
 with col2:
     salary = st.text_input(
         "",
