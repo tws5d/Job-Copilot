@@ -19,31 +19,11 @@ with col1:
 with col2:
     st.markdown("<h4 style='text-align: center;'>💰 Desired Minimum Salary</h4>", unsafe_allow_html=True)
 
-    st.markdown("""
-        <style>
-        div[data-testid="stSlider"] div[role="slider"] > div {
-            visibility: hidden;
-        }
-        </style>
-    """, unsafe_allow_html=True)
-        
-    salary = st.slider(
+    salary_input = st.text_input(
         label="",
-        min_value=0,
-        max_value=500000,
-        step=5000,
-        value=250000,
-        label_visibility="collapsed"
+        placeholder="e.g., $125,000"
     )
 
-    # Custom labels under the slider
-    st.markdown(f"""
-    <div style='display: flex; justify-content: space-between; padding: 0 8px;'>
-        <span style='color: #aaa;'>$0</span>
-        <span style='color: red; font-weight: bold;'>${salary:,.0f}</span>
-        <span style='color: #aaa;'>$500K+</span>
-    </div>
-    """, unsafe_allow_html=True)
 
     
 
