@@ -5,7 +5,7 @@ st.markdown("<h1 style='text-align: center;'>Job Application Copilot</h1>", unsa
 col1, col2 = st.columns([3, 4])
 
 with col1:
-    with st.expander("📘 How to Use This Tool", expanded=False):
+    with st.expander("🤖 How to Use This Tool", expanded=False):
         st.markdown("""
         <div style='text-align: left;'>
             <p><strong>Step 1:</strong> Set your job preferences</p>
