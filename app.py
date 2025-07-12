@@ -18,10 +18,11 @@ with col1:
 
 with col2:
     st.markdown("""
-        <h5 style='text-align: center; margin-bottom: 0.25rem; font-size: 1.1rem;'>
+        <h5 style='text-align: center; margin-bottom: 0.1rem; margin-top: 0rem; font-size: 1.1rem;'>
             💰 Desired Minimum Salary
         </h5>
     """, unsafe_allow_html=True)
+
 
     salary_input = st.text_input(
         label="",
