@@ -20,7 +20,7 @@ with col1:
     st.markdown("<h3 style='text-align: center;'>Job Fit: 🟡 Moderate</h3>", unsafe_allow_html=True) # placeholder fit logic
     
     # Placeholder radar chart
-    categories = ['Skills', 'Experience', 'Culture Fit', 'Location', 'Salary']
+    categories = ['Skills', 'Experience', 'Culture', 'Location', 'Salary']
     values = [3, 4, 2, 5, 3]
 
     fig = go.Figure()
