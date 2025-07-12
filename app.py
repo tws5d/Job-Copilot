@@ -30,7 +30,7 @@ with col1:
         fill='toself',
         name='Fit Score',
         mode='lines',
-        hoverinfo='skip'
+        text=[]
     ))
     fig.update_layout(
         width=300,
