@@ -49,7 +49,7 @@ with col2:
         placeholder="💰 Desired Salary (E.g., $95,000)",
         label_visibility="collapsed"
     )
-    st.markdown("<div style='text-align: center; font-weight: bold;'>Preferred Work Setup</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center; font-weight: bold; margin-top: -10px;'>Preferred Work Setup</div>", unsafe_allow_html=True)
 
     location_pref = st.multiselect(
         label="",
