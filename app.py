@@ -50,9 +50,10 @@ with col2:
         label_visibility="collapsed"
     )
     st.markdown(
-        "<p style='text-align: center; font-weight: bold; margin: 0;'>Preferred Work Setup</p>",
+        "<p style='text-align: center; font-weight: bold; margin: 0 0 2px 0;'>Preferred Work Setup</p>",
         unsafe_allow_html=True
     )
+
     location_pref = st.multiselect(
         label="",
         options=["Remote", "Hybrid", "On Site"]
