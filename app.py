@@ -41,10 +41,7 @@ with col1:
         margin=dict(l=60, r=80, t=0, b=40),
         showlegend=False
     )
-
     st.plotly_chart(fig, use_container_width=True)
-
-
     
 with col2:
     salary = st.text_input(
@@ -52,3 +49,8 @@ with col2:
         placeholder="💰 Desired Salary (E.g., $95,000)",
         label_visibility="collapsed"
     )
+    location_pref = st.multiselect(
+        "Work Arrangement",
+        options=["Remote", "Hybrid", "On Site"]
+    )
+
