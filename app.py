@@ -22,11 +22,12 @@ with col2:
     # Hide default slider value labels using CSS
     st.markdown("""
         <style>
-        .stSlider > div[data-baseweb="slider"] > div:first-child {
+        div[data-testid="stSlider"] > label + div div:nth-of-type(2) {
             display: none;
         }
         </style>
     """, unsafe_allow_html=True)
+
 
     salary = st.slider(
         label="",
