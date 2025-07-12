@@ -28,9 +28,10 @@ with col1:
         r=values,
         theta=categories,
         fill='toself',
-        name='Fit Score'
+        name='Fit Score',
+        mode='lines',
+        hoverinfo='skip'
     ))
-    fig.update_traces(mode='lines+fill')
     fig.update_layout(
         width=300,
         height=300,
