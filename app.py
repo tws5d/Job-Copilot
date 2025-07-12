@@ -18,6 +18,15 @@ with col1:
 
 with col2:
     st.markdown("<h4 style='text-align: center;'>💰 Desired Minimum Salary</h4>", unsafe_allow_html=True)
+    
+    # Hide default slider value labels using CSS
+    st.markdown("""
+        <style>
+        .stSlider > div[data-baseweb="slider"] > div:first-child {
+            display: none;
+        }
+        </style>
+    """, unsafe_allow_html=True)
 
     salary = st.slider(
         label="",
