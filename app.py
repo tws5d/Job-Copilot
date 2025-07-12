@@ -37,7 +37,7 @@ with col2:
     </div>
     <style>
     .salary-input-wrapper {
-        transform: translateY(-0.5rem) !important;
+        transform: translateY(-10.5rem) !important;
     }
     </style>
     """, unsafe_allow_html=True)
