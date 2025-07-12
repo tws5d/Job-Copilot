@@ -17,14 +17,21 @@ with col1:
         """, unsafe_allow_html=True)
 
 with col2:
+    # THE FIX: Use a <p> tag with a font-size to match the other widgets.
+    # The margin-bottom helps align it with the text inside the input box.
     st.markdown(
-        "<h3 style='margin:0; font-size:1.25rem;'>💰 Desired Salary</h3>",
+        """
+        <p style='font-size: 1rem; text-align: right; margin-bottom: 0.65rem;'>
+            💰 Desired Salary
+        </p>
+        """,
         unsafe_allow_html=True
     )
 
 with col3:
+    # This is the completed text_input call.
     salary = st.text_input(
-        "", 
-        placeholder="E.g., $95,000", 
+        "",
+        placeholder="E.g., $95,000",
         label_visibility="collapsed"
     )
