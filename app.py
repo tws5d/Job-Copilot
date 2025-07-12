@@ -17,7 +17,7 @@ with col1:
         """, unsafe_allow_html=True)
 
 with col2:
-    sub1, sub2 = st.columns([1, 2])
+    sub1, sub2 = st.columns([2, 1])
     sub1.markdown(
         "<h3 style='text-align: left; line-height: 1.1; margin:0; font-size: 1.25rem;'>💰 Desired Salary</h3>",
         unsafe_allow_html=True
