@@ -30,7 +30,7 @@ with col2:
     sub2.markdown('<div class="salary-input-wrapper">', unsafe_allow_html=True)
 
     # lift the input up by giving an empty div a negative bottom margin
-    sub2.markdown('<div style="margin-bottom: -5rem;"></div>', unsafe_allow_html=True)
+    sub2.markdown('<div style="margin-bottom: -10rem;"></div>', unsafe_allow_html=True)
 
     # empty label, placeholder text
     salary = sub2.text_input("", placeholder="E.g., $95,000")
