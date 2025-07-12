@@ -30,6 +30,7 @@ with col1:
         fill='toself',
         name='Fit Score'
     ))
+    fig.update_traces(mode='lines+fill')
     fig.update_layout(
         width=300,
         height=300,
