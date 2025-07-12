@@ -38,7 +38,7 @@ with col1:
         polar=dict(
             radialaxis=dict(visible=True, range=[0, 5]),
         ),
-        margin=dict(l=80, r=40, t=0, b=40),
+        margin=dict(l=60, r=20, t=0, b=40),
         showlegend=False
     )
 
