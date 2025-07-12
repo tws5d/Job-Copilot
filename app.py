@@ -21,14 +21,8 @@ with col2:
 
     st.markdown("""
         <style>
-        /* Hide default min/max labels */
-        div[data-testid="stSlider"] > label + div div:nth-of-type(2) {
-            display: none;
-        }
-
-        /* Hide the floating tooltip */
-        div[data-testid="stSlider"] span[data-testid="stTooltipContent"] {
-            display: none;
+        div[data-testid="stSlider"] div[role="slider"] > div {
+            visibility: hidden;
         }
         </style>
     """, unsafe_allow_html=True)
